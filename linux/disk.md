@@ -15,3 +15,8 @@ none                5120        0      5120   0% /run/lock
 none             5233744   140956   5092788   3% /run/shm
 none              102400       60    102340   1% /run/user
 ```
+
+## How to find largest files on the disk
+
+find -type f -exec du -Sh {} + | sort -rh | head -n 
+Taken from https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/
